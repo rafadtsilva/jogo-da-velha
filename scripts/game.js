@@ -3,6 +3,7 @@ let playerTime = 0;
 let symbols = ['o', 'x'];
 let gameOver = false;
 let click=0;
+let seqFinal = []
 
 let winStates = [
   [0,1,2],
@@ -52,7 +53,10 @@ function isWin() {
     if(board[pos1] == board[pos2] &&
        board[pos1] == board[pos3] &&
        board[pos1] != '') {
-         return true;
+
+        seqFinal = [seq[0], seq[1], seq[2]]
+
+        return true;
        }
 
   }

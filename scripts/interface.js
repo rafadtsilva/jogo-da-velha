@@ -18,7 +18,6 @@ function addClick () {
 function handleClick(event) {
 
   click++;
-  console.log(click)
   let square = event.target;
   square.removeEventListener('click', handleClick);
   let position = square.id;
@@ -45,11 +44,20 @@ function updateSquares(position) {
 
   let square = document.getElementById(position.toString());
   let symbol = board[position];
-
   square.innerHTML = `<div class='${symbol}'></div>`
 
+  if(gameOver){
+    for(let seq of seqFinal) {
+      document.getElementById(seq.toString()).style.backgroundColor = "green";
+    }
+  }
 
-  
+  if(click==9 && gameOver==false) {
+    for(let i=0; i<9; i++){  
+      document.getElementById(i.toString()).style.backgroundColor = "yellow";
+    }
+  }
+
 }
 
 function reset () {
@@ -64,6 +72,7 @@ function reset () {
 
   squares.forEach((square) => {
     square.innerHTML = "";
+    square.style.backgroundColor = "beige";
   })
 
 }
