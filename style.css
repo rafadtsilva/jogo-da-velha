@@ -2,26 +2,53 @@
 
 body {
   text-align: center;
+  background-color: #14BCAB;
 }
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.stage {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 450px;
+  height: 450px;
+  background-image: url(assets/fundo.png);
+  background-size: cover;
+  background-position: center; /* Center the image */
+
 }
 
 .square {
-  width: 100px;
-  height: 100px;
-  background-color: beige;
-  border: 1px solid grey;
-  display: inline-block;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
 }
 
-.o {
+img {
+  width: 100px;
+}
+
+
+
+/* .o {
   position: relative;
 }
 
 .o::after {
-  content: "\1F6E1";
+  content: "\274C";
   font-size: 50px;
   line-height: 100px;
   position: absolute;
@@ -32,11 +59,12 @@ h1 {
 }
 
 .x {
-  position: relative;
+  display: flex;
+  align-self: center;
 }
 
 .x::after {
-  content: "\2694";
+  content: "";
   font-size: 50px;
   line-height: 100px;
   position: absolute;
@@ -44,4 +72,4 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-}
+} */
