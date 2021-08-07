@@ -26,13 +26,13 @@ function handleClick(event) {
     
     setTimeout(() => {
       if(!alert("O Jogo Acabou - O vencedor foi " + playerTime)) reset();
-    }, 10)
+    }, 20)
 
   } else if (click==9) {
 
     setTimeout(() => {
       if(!alert("Empate!!")) reset();
-    }, 10)
+    }, 20)
 
   };
 
@@ -44,7 +44,11 @@ function updateSquares(position) {
 
   let square = document.getElementById(position.toString());
   let symbol = board[position];
-  square.innerHTML = `<div class='${symbol}'></div>`
+  // square.innerHTML = `<div class='${symbol}'></div>`
+
+  square.innerHTML = `<img src="assets/${symbol}.svg">`;
+
+
 
   if(gameOver){
     for(let seq of seqFinal) {
@@ -72,7 +76,7 @@ function reset () {
 
   squares.forEach((square) => {
     square.innerHTML = "";
-    square.style.backgroundColor = "beige";
+    square.style.backgroundColor = "unset";
   })
 
 }
