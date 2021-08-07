@@ -52,13 +52,13 @@ function updateSquares(position) {
 
   if(gameOver){
     for(let seq of seqFinal) {
-      document.getElementById(seq.toString()).style.backgroundColor = "green";
+      document.getElementById(seq.toString()).style.backgroundColor = "#0487D9";
     }
   }
 
   if(click==9 && gameOver==false) {
     for(let i=0; i<9; i++){  
-      document.getElementById(i.toString()).style.backgroundColor = "yellow";
+      document.getElementById(i.toString()).style.backgroundColor = "#F2994B";
     }
   }
 

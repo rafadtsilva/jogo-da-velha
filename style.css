@@ -2,27 +2,34 @@
 
 body {
   text-align: center;
-  background-color: #14BCAB;
+  background-color: #074073;
+  font-size: 60px;
+  letter-spacing: 10px;
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Londrina Solid', cursive;
   color: white;
+  font-size: 3rem;
+  letter-spacing: 10px;
 }
 
 .stage {
-  height: 80vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color: red; */
 }
 
 .stage2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 450px;
-  height: 450px;
+  width: 80vw;
+  height: 80vw;
+  max-width: 450px;
+  max-height: 450px;
   background-image: url(assets/fundo.png);
   background-size: cover;
   background-position: center; /* Center the image */
@@ -33,13 +40,11 @@ h1 {
   display: grid;
   justify-items: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
   cursor: pointer;
 }
 
 img {
-  width: 100px;
+  width: 66%;
 }
 
 
