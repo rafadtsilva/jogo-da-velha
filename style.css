@@ -1,13 +1,16 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   text-align: center;
   background-color: #074073;
-  font-size: 60px;
-  letter-spacing: 10px;
 }
 
 h1 {
+  margin: 5vw;
   font-family: 'Londrina Solid', cursive;
   color: white;
   font-size: 3rem;
@@ -15,19 +18,17 @@ h1 {
 }
 
 .stage {
-  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
 }
 
 .stage2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 80vw;
-  height: 80vw;
+  width: 60vmin;
+  height: 60vmin;
   max-width: 450px;
   max-height: 450px;
   background-image: url(assets/fundo.png);
@@ -43,39 +44,45 @@ h1 {
   cursor: pointer;
 }
 
-img {
+.stage2 img {
   width: 66%;
 }
 
-
-
-/* .o {
-  position: relative;
+.score {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60vmin;
 }
 
-.o::after {
-  content: "\274C";
-  font-size: 50px;
-  line-height: 100px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.x {
+.score div {
   display: flex;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #0487D9;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
 }
 
-.x::after {
-  content: "";
-  font-size: 50px;
-  line-height: 100px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
+.score p, #buttons p {
+  font-size: 25px;
+  color: white;
+}
+
+.score img {
+  width: 5vmin;
+  margin-right: 2px;
+}
+
+button {
+  border: none;
+  background-color: #F24C27;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+#buttons p {
+  font-size: 15px;
+}

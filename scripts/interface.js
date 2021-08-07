@@ -1,3 +1,5 @@
+let squares = document.querySelectorAll(".square");
+let scoreText = document.querySelectorAll(".player p");
 
 document.addEventListener('DOMContentLoaded', () => {
   
@@ -6,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function addClick () {
-
-  let squares = document.querySelectorAll(".square");
 
   squares.forEach((square) => {
     square.addEventListener('click', handleClick);
@@ -25,7 +25,11 @@ function handleClick(event) {
   if(handleMove(position)) {
     
     setTimeout(() => {
-      if(!alert("O Jogo Acabou - O vencedor foi " + playerTime)) reset();
+      if(!alert("O Jogo Acabou - O vencedor foi " + playerTime)) {
+        score[playerTime]++;
+        scoreText[playerTime].innerHTML = `: ${score[playerTime]}`;
+        reset();
+      } 
     }, 20)
 
   } else if (click==9) {
@@ -42,9 +46,8 @@ function handleClick(event) {
 
 function updateSquares(position) {
 
-  let square = document.getElementById(position.toString());
+  let square = squares[position];
   let symbol = board[position];
-  // square.innerHTML = `<div class='${symbol}'></div>`
 
   square.innerHTML = `<img src="assets/${symbol}.svg">`;
 
@@ -62,6 +65,13 @@ function updateSquares(position) {
     }
   }
 
+}
+
+function resetAll () {
+  score = [0, 0];
+  scoreText[0].innerHTML = `: ${score[0]}`;
+  scoreText[1].innerHTML = `: ${score[1]}`;
+  reset();
 }
 
 function reset () {

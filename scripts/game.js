@@ -4,6 +4,7 @@ let symbols = ['o', 'x'];
 let gameOver = false;
 let click=0;
 let seqFinal = []
+let score = [0, 0]
 
 let winStates = [
   [0,1,2],
